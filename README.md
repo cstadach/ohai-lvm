@@ -1,7 +1,8 @@
 ohai-lvm
 ========
-
 ohai plug-in to gather lvm layout
+
+Updated to Ohai Version 7. Thanks to Stephen Wright for the update.
 
 Install & Config
 ================
