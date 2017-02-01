@@ -43,7 +43,7 @@ Ohai.plugin(:Lvm) do
 
     lvs_output = `lvs  --nosuffix --units m `.split("\n")
     lvs_output.each do |lv_line|
-      lv_name, vg_name, _junk, _size, _junk = lv_line.split(' ')
+      lv_name, vg_name, _junk, size, _junk = lv_line.split(' ')
       unless lv_name == 'LV'
         lvm["#{vg_name}"]['lvs']["#{lv_name}"] = { 'size' => "#{size}" }
         if vg_name == root_vg && lv_name == root_lv
